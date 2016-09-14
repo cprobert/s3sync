@@ -102,7 +102,7 @@ module S3
   # url encode the result of that to protect the string if it's going to
   # be used as a query string parameter.
   def S3.encode(aws_secret_access_key, str, urlencode=false)
-    digest = OpenSSL::Digest::Digest.new('sha1')
+    digest = OpenSSL::Digest.new('sha1')
     b64_hmac =
       Base64.encode64(
                       OpenSSL::HMAC.digest(digest, aws_secret_access_key, str)).strip

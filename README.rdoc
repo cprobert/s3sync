@@ -1,4 +1,8 @@
 
+== CHANGED from original to be compatible with 2.x
+Fix for bug:
+Use OpenSSL::Digest instead of deprecated OpenSSL::Digest::Digest
+
 == CHANGED from original to be compatible with 1.9.3
 Removed Iconv dependancy - changed to string.encode
 
